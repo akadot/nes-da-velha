@@ -1,49 +1,51 @@
+:root {
+  --color-cross: #50fa7b;
+  --color-circle: #ff5555;
+}
+
 * {
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
 body,
 html {
-    height: 100vh;
+  height: 100vh;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #212529;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212529;
 }
 
 .container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-
 .board {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 310px;
-    height: 310px;
-    background-color: #000;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #191622;
 }
 
 .board div {
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
-    margin-bottom: 5px;
-}
-
-.playerX {
-    background-image: url('./assets/cross.png');
-}
-
-.playerO {
-    background-image: url('./assets/circle.png');
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #332d47;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
