@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     squares.forEach((item) => {
       item.textContent = "";
     });
+    result.textContent = "";
+    playerDisplay.textContent = "";
     gameOver = false;
   });
 
@@ -38,17 +40,27 @@ document.addEventListener("DOMContentLoaded", () => {
       if (currentPlayer === "cross" && squaresArray[index].textContent == "") {
         squaresArray[index].style.color = "#50fa7b";
         squaresArray[index].textContent = "X";
+
+        playerDisplay.style.color = "#50fa7b";
+        playerDisplay.textContent = "X";
+
         currentPlayer = "circle";
       }
       if (currentPlayer === "circle" && squaresArray[index].textContent == "") {
         squaresArray[index].style.color = "#ff5555";
         squaresArray[index].textContent = "O";
+
+        playerDisplay.style.color = "#ff5555";
+        playerDisplay.textContent = "O";
+
         currentPlayer = "cross";
       }
 
       const pickWinner = checkWinner(squaresArray[index].textContent);
+
       if (pickWinner === true) {
-        result.textContent += squaresArray[index].textContent;
+        result.style.color = playerDisplay.style.color;
+        result.textContent = squaresArray[index].textContent;
         gameOver = true;
       }
     } else {

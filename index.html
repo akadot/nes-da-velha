@@ -12,22 +12,28 @@
   </head>
   <body>
     <div class="container">
-      <div class="board">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="info nes-container is-dark with-title">
-        <p class="title">Título</p>
-        <h1 id="player"></h1>
-        <h2 id="result">Result:</h2>
-        <button id="btn">Start / Reset</button>
+      <h1 class="title nes-text is-primary">NES da Velha</h1>
+      <div class="content">
+        <div class="board">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu nes-container is-dark with-title is-centered">
+          <p class="title">Menu</p>
+          <h1 class="nes-text is-success">GAME INFO</h1>
+          <div class="info">
+            <p>Current Player: <span id="player"></span></p>
+            <p>Player Winner: <span id="result"></span></p>
+          </div>
+          <button id="btn" class="nes-btn is-primary">Start / Reset</button>
+        </div>
       </div>
     </div>
     <script src="./script.js"></script>
